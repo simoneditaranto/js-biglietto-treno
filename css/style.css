@@ -1,9 +1,29 @@
-.container{
+.container-lg{
     margin-top: 100px;
 
-    background-color: rgba(2, 107, 103, 0.5);
+    /* background-color: rgba(2, 107, 103, 0.5); */
+    background-image: url(../img/palla-di-pomodoro-pesaro.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container-lg .cont .calculator{
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .calculator i{
+    font-size: 25px;
+
     color: yellow;
+}
+
+.calculator{
+    font-size: 20px;
+    font-weight: bold;
+
+    color: white;
 }

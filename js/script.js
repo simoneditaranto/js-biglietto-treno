@@ -13,20 +13,33 @@
 // effettuare dei controlli per capire se l'utente ha inserito correttamente il numero di km e l'età (ovvero se sono effettivamente dei numeri e non testo a caso)
 
 
-const userDistance = prompt("Inserisci la distanza in km che vuoi percorrere");
-const userAge = prompt("Inserisci la tua età");
+const userDistance = Number(prompt("Inserisci la distanza in km che vuoi percorrere"));
+const userAge = Number(prompt("Inserisci la tua età"));
 
 let ticketPrice = userDistance * 0.21;
 
-// controllo se posso effettuare lo sconto
-if(userAge <= 17) {
-    // se l'utente è minorenne
-    ticketPrice = ticketPrice - ((ticketPrice / 100) * 20);
-} else if(userAge >= 65){
-    // se l'utente è over 65
-    ticketPrice = ticketPrice - ((ticketPrice / 100) * 40);
+if(!isNaN(userDistance) && !isNaN(userAge) && userDistance > 0 && userAge > 0) {
+
+    // controllo se posso effettuare lo sconto
+    if(userAge <= 17) {
+        // se l'utente è minorenne
+        ticketPrice = ticketPrice - ((ticketPrice / 100) * 20);
+    } else if(userAge >= 65){
+        // se l'utente è over 65
+        ticketPrice = ticketPrice - ((ticketPrice / 100) * 40);
+    }
+    document.getElementById("price").innerHTML = "Il prezzo del tuo biglietto è: ";
+    document.getElementById("number").innerHTML = `${ticketPrice.toFixed(2)} €`;
+    // test
+    // console.log(userDistance);
+    // console.log(userAge);
+
+} else {
+
+    document.getElementById("error").innerHTML = "I valori inseriti non sono accettabili, ricaricare la pagina per riprovare";
+
 }
 
-document.getElementById("price").innerHTML = `Il prezzo del tuo biglietto è ${ticketPrice.toFixed(2)} €`;
+
 
 

@@ -20,13 +20,23 @@
 
     <body>
 
-        <div class="container text-center p-5">
-        
-            <h1 class="mb-4">Calcolo prezzo del biglietto del treno</h1>
+        <div class="container-lg p-5">
 
-            <div class="calculator d-flex justify-content-center align-items-center gap-2">
-                <i class="fa-solid fa-train"></i>
-                <div id="price"></div>
+            <div class="cont col-6 offset-6 text-primary">
+        
+                <h1 class="text-center">Calcolo prezzo del biglietto del treno</h1>
+
+                <div class="calculator d-flex justify-content-center align-items-center gap-2">
+                    <i class="fa-solid fa-train"></i>
+                    <div id="price">
+                        <div class="spinner-border text-danger" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                    </div>
+                    <div id="number" class="text-success"></div>
+                    <div id="error" class="text-danger"></div>
+                </div>
+
             </div>
 
         </div>
