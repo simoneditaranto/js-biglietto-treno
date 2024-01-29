@@ -19,13 +19,40 @@
     </head>
 
     <body>
-
-
-        <h1>Convertitore da C a F</h1>
-
-        <div id="g_celsius"></div>
+        <div class="container border border-success p-4 mt-5">
         
-        <div id="conversion"></div>
+            <h1 class="text-center">Convertitore da C a F</h1>
+
+            <div class="c-container col-6 p-3 m-auto bg-secondary bg-opacity-25">
+
+                <div class="celsius row">
+                    <span class="col-6 col-md-4 p-2 fw-bold">Celsius:</span>
+                    <div id="g_celsius" class="col-6 col-md-4 bg-white p-2">
+                        <div id="error" class="text-danger"></div>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-rotate text-danger"></i>
+                
+                <div class="conv row mb-3">
+                    <span class="col-6 col-md-4 p-2 fw-bold">Fahrenheit:</span>
+                    <div id="conversion" class="col-6 col-md-4 p-2 bg-success bg-opacity-50">
+                        <div id="error_fahr" class="text-warning"></div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="conv row">
+                    <span class="col-6 col-md-4 p-2 fw-bold">Calcolo:</span>
+                    <div class="col-6 col-md-4 p-2 bg-success bg-opacity-50 text-primary fw-bold">
+                        <span class="text-warning me-2">(</span>(°C * 1.8) + 32<span class="text-warning ms-2">)</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
        
 
         <!-- js -->
