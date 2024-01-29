@@ -20,11 +20,62 @@
 
     <body>
 
+        <div class="container">
+            
+            <h1 class="text-center">Sasso carta forbici</h1>
 
-        <h1>Sasso carta forbici</h1>
+            <div class="row">
 
-        <div id="result" class="text-success"></div>
-        <div id="error" class="text-danger"></div>
+                
+
+                <div class="col-12 col-md-5 d-flex flex-column gap-3 p-3 mb-3 mb-md-0 fs-3 bg-secondary bg-opacity-25">
+
+                    <h2 class="text-primary">Scelta utente</h2>
+
+                    <div class="stone-container d-flex align-items-center gap-5">
+                        <i class="fa-solid fa-gem"></i>
+                        <span id="stone" class="px-5 text-success bg-white"></span>
+                    </div>
+
+                    <div class="stone-container d-flex align-items-center gap-5">
+                        <i class="fa-regular fa-hand"></i>
+                        <span id="paper" class="px-5 text-success bg-white"></span>
+                    </div>
+
+                    <div class="stone-container d-flex align-items-center gap-5">
+                        <i class="fa-regular fa-hand-scissors"></i>
+                        <span id="scissors" class="px-5 text-success bg-white"></span>
+                    </div>       
+
+                </div>
+
+                <div class="col-12 col-md-5 offset-md-2 d-flex flex-column gap-3 p-3 fs-3 bg-secondary bg-opacity-25">
+                    
+                    <h2 class="text-primary">Scelta computer</h2>
+
+                    <div class="stone-container d-flex align-items-center gap-5">
+                        <i class="fa-solid fa-gem"></i>
+                        <span id="pc_stone" class="px-5 text-successpx-5 text-danger bg-white"></span>
+                    </div>
+
+                    <div class="stone-container d-flex align-items-center gap-5">
+                        <i class="fa-regular fa-hand"></i>
+                        <span id="pc_paper" class="px-5 text-danger bg-white"></span>
+                    </div>
+
+                    <div class="stone-container d-flex align-items-center gap-5">
+                        <i class="fa-regular fa-hand-scissors"></i>
+                        <span id="pc_scissors" class="px-5 text-danger bg-white"></span>
+                    </div>     
+
+                </div>
+
+                <div id="result" class="fs-1 text-success text-center"></div>
+                <div id="error" class="text-danger text-center fs-1"></div>
+
+            </div>
+
+        </div>
 
         <!-- js -->
         <script src="../../snack/snack-3/snack-js/script.js"></script>

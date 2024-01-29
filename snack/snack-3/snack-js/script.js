@@ -6,18 +6,23 @@
 // 3 - forbice
 
 const userChoice = prompt("Sasso, carta o forbice?");
+// userChoice = "carta";
 let numberChoice = 0;
 
 
 if(userChoice == "sasso") {
     numberChoice = 1;
     console.log(numberChoice);
+    document.getElementById("stone").innerHTML = `<i class="fa-solid fa-user-ninja"></i>`;
+
 } else if(userChoice == "carta") {
     numberChoice = 2;
     console.log(numberChoice);
+    document.getElementById("paper").innerHTML = `<i class="fa-solid fa-user-ninja"></i>`;
 } else if(userChoice == "forbice"){
     numberChoice = 3;
     console.log(numberChoice);
+    document.getElementById("scissors").innerHTML = `<i class="fa-solid fa-user-ninja"></i>`;
 } else {
     document.getElementById("error").innerHTML = "Il testo inserito non è valido, ricaricare la pagina!";
     console.log(userChoice);
@@ -26,6 +31,15 @@ if(userChoice == "sasso") {
 // scelta casuale del computer
 const computerChoice = Math.floor(Math.random() * 3 + 1);
 console.log(computerChoice);
+
+if(computerChoice === 1) {
+    document.getElementById("pc_stone").innerHTML = `<i class="fa-solid fa-user-ninja"></i>`;
+
+} else if(computerChoice === 2) {
+    document.getElementById("pc_paper").innerHTML = `<i class="fa-solid fa-user-ninja"></i>`;
+} else if(computerChoice === 3){
+    document.getElementById("pc_scissors").innerHTML = `<i class="fa-solid fa-user-ninja"></i>`;
+}
 
 if(numberChoice != 0) {
     // se ho inserito un testo valido
@@ -38,7 +52,8 @@ if(numberChoice != 0) {
             (numberChoice === 3 && computerChoice === 2) ) {
     
             document.getElementById("result").innerHTML = "Hai vinto!";
-    
+            // <i class="fa-solid fa-user-ninja"></i>
+
         } else {
             document.getElementById("result").innerHTML = "Hai perso!";
         } 
